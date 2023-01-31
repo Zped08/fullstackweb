@@ -24,7 +24,6 @@ const notes = [
 
 const App = (props) => {
   const { notes } = props;
-
   return (
     <div>
       <h1>Notes</h1>
