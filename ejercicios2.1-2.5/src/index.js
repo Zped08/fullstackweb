@@ -1,7 +1,8 @@
 import Course from './components/Course'
+import React from 'react'
+import ReactDOM from 'react-dom'
 
 const App = () => {
-  console.log(App)
   const course = {
     id: 1,
     name: "Half Stack application development",
@@ -28,3 +29,5 @@ const App = () => {
 };
 
 export default App;
+
+ReactDOM.render(<App />, document.getElementById('root'))

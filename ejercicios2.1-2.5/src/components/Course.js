@@ -1,16 +1,19 @@
-import React from 'react'
+import React from 'react';
 
-const Course = ({ course }) => {
-    return (
-      <>
-        <h1>{course.name}</h1>
-        {course.parts.map((part) => (
-          <p key={part.id}>
-            {part.name} {part.exercises}
-          </p>
-        ))}
-      </>
-    );
-  };
+const Course = (props) => {
+  const { course } = props;
+  const { name, parts } = course;
 
-export default Course
+  return (
+    <>
+      <h1>{name}</h1>
+      {parts.map(part => (
+        <div key={part.id}>
+          <p>{part.name} {part.exercises}</p>
+        </div>
+      ))}
+    </>
+  );
+};
+
+export default Course;
