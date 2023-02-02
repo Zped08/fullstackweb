@@ -1,18 +1,16 @@
 import React from 'react';
+import Header from './Header';
+import Content from './Content'
 
 const Course = (props) => {
   const { course } = props;
   const { name, parts } = course;
 
   return (
-    <>
-      <h1>{name}</h1>
-      {parts.map(part => (
-        <div key={part.id}>
-          <p>{part.name} {part.exercises}</p>
-        </div>
-      ))}
-    </>
+    <div>
+      <Header name={name}/>
+      <Content parts={parts}/>
+    </div>
   );
 };
 
