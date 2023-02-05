@@ -3,7 +3,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 const App = () => {
-  const course = [
+  const courses = [
     {
       id: 1,
       name: "Half Stack application development",
@@ -50,15 +50,8 @@ const App = () => {
   
   return (
     <div>
-      {course.map(course => (
-        <div key={course.id}>
-          <h1>{course.name}</h1>
-          {course.parts.map(part => (
-            <p key={part.id}>
-              {part.name} {part.exercises}
-            </p>
-          ))}
-        </div>
+      {courses.map((courses) => (
+        <Course key={courses.id} course={courses}/>
       ))}
     </div>
   )

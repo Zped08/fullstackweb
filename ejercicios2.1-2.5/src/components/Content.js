@@ -11,6 +11,7 @@ const Content = (props) => {
         <Part key={part.id} part={part} />
       ))}
       <p>Number total of exercises {total}</p>
+      
     </div>
   );
 };
